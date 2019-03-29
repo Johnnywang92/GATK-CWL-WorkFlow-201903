@@ -1,0 +1,13 @@
+inputFileName_markDup: 
+  class: File
+  path: samtools-sort-2019-03-21.bam
+outputFileName_markDup: HY18100238_sorted_markdup.bam
+#markDups_output: HY18100238_sorted_markdup.bam
+tmpdir: ./tmp
+metricsFile: metricsFile-markDups2019.metrics
+
+readSorted: true
+
+removeDuplicates: true
+
+creatindex: true

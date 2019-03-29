@@ -1,0 +1,4 @@
+alignments:
+  class: File
+  path: HY18100238.bam
+output_name: HY18100238_sorted.bam 

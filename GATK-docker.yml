@@ -1,0 +1,3 @@
+class: DockerRequirement
+#dockerPull: fzkhan/picard-1.136-gatk-2.8 
+dockerPull: d3bcenter/alpine-gatk3.8

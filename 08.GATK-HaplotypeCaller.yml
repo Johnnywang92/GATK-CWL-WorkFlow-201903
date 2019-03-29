@@ -1,0 +1,12 @@
+reference:
+  class: File
+  path: ../00.REF_datasets/Homo_sapiens_assembly38.fasta
+outputfile_HaplotypeCaller: HaplotypeCaller2019.vcf
+
+dbsnp:
+  class: File
+  path: ../00.REF_datasets/dbsnp_146.hg38.vcf
+
+inputBam_HaplotypeCaller:
+  class: File
+  path: HY18100238_PrintReads2019.bam  

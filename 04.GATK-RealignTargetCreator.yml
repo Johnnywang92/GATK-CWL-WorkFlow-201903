@@ -1,0 +1,8 @@
+reference:
+  class: File
+  path: ../00.REF_datasets/Homo_sapiens_assembly38.fasta
+outputfile_realignTarget: HY18100238_RealignTargetCreator2019.intervals
+known: [{"path":"../00.REF_datasets/dbsnp_146.hg38.vcf", "class": "File"}, {"path": "../00.REF_datasets/Mills_and_1000G_gold_standard.indels.hg38.vcf", "class": "File"}, {"path": "../00.REF_datasets/1000G_phase1.snps.high_confidence.hg38.vcf", "class": "File"}]
+inputBam_realign: 
+  class: File
+  path: HY18100238_sorted_markdup.bam 

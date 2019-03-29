@@ -1,0 +1,9 @@
+reference:
+  class: File
+  path: ../00.REF_datasets/Homo_sapiens_assembly38.fasta
+output_bwamem: HY18100238.sam
+reads: 
+  - class: File
+    path: ../01.FQ_test/HY18100238_DHE16684_BHNY22CCXY_L5_R1.fastq.gz
+  - class: File
+    path: ../01.FQ_test/HY18100238_DHE16684_BHNY22CCXY_L5_R2.fastq.gz

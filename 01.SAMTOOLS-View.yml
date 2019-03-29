@@ -1,0 +1,5 @@
+input:
+  class: File
+  path: HY18100238.sam
+output_name: HY18100238.bam
+threads: -Sb
