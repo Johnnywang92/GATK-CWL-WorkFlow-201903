@@ -16,7 +16,8 @@ output_samtools-sort: samtools-sort-2019-03-21.bam
 
 output_markDuplicates: markDuplicates-2019-03-21.bam
 
-tmp: /home/bpvast/01.test/CWL/tmp 
+tmp: ./tmp 
+##tmp: $(runtime.tmpdir)
 
 metricsFile_markDuplicates: metricsFile-markDuplicate2019-03-21.metrics
 
