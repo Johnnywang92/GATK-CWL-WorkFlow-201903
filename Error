@@ -1,0 +1,93 @@
+[workflow ] starting step markDuplicates
+[step markDuplicates] start
+[job markDuplicates] /tmp/28h_j0bq$ docker \
+    run \
+    -i \
+    --volume=/tmp/28h_j0bq:/pXbDAg:rw \
+    --volume=/tmp/q2gfy6t7:/tmp:rw \
+    --volume=/tmp/zzuqc4mx/samtools-sort-2019-03-21.bam:/var/lib/cwl/stg871a2789-0abb-4d3c-8244-3d5f0c32d923/samtools-sort-2019-03-21.bam:ro \
+    --workdir=/pXbDAg \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/pXbDAg \
+    --cidfile=/tmp/asp7gqb5/20190328124012-712750.cid \
+    kfdrc/picard \
+    java \
+    -Xmx4g \
+    -jar \
+    /picard.jar \
+    MarkDuplicates \
+    INPUT=/var/lib/cwl/stg871a2789-0abb-4d3c-8244-3d5f0c32d923/samtools-sort-2019-03-21.bam \
+    OUTPUT=markDuplicates-2019-03-21.bam \
+    METRICS_FILE=metricsFile-markDuplicate2019-03-21.metrics \
+    REMOVE_DUPLICATES=true \
+    CREATE_INDEX=true \
+    TMP_DIR= \
+    /home/bpvast/01.test/CWL/tmp \
+    'ASSUME_SORTED= TRUE'
+04:40:16.316 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Mar 28 04:40:16 GMT 2019] MarkDuplicates INPUT=[/var/lib/cwl/stg871a2789-0abb-4d3c-8244-3d5f0c32d923/samtools-sort-2019-03-21.bam] OUTPUT=markDuplicates-2019-03-21.bam METRICS_FILE=metricsFile-markDuplicate2019-03-21.metrics REMOVE_DUPLICATES=true ASSUME_SORTED=false TMP_DIR=[/home/bpvast/01.test/CWL/tmp] CREATE_INDEX=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true ADD_PG_TAG_TO_READS=true DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Mar 28 04:40:16 GMT 2019] Executing as ?@83bc93520372 on Linux 4.4.0-116-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_191-b12; Deflater: Intel; Inflater: Intel; Picard version: 2.17.4-SNAPSHOT
+INFO	2019-03-28 04:40:16	MarkDuplicates	Start of doWork freeMemory: 996964168; totalMemory: 1011351552; maxMemory: 3817865216
+INFO	2019-03-28 04:40:16	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2019-03-28 04:40:16	MarkDuplicates	Will retain up to 13832844 data points before spilling to disk.
+INFO	2019-03-28 04:40:22	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:05s.  Time for last 1,000,000:    5s.  Last read position: chr1:100,133,238
+INFO	2019-03-28 04:40:22	MarkDuplicates	Tracking 3065 as yet unmatched pairs. 164 records in RAM.
+INFO	2019-03-28 04:40:30	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:13s.  Time for last 1,000,000:    8s.  Last read position: chr1:217,630,900
+INFO	2019-03-28 04:40:30	MarkDuplicates	Tracking 5944 as yet unmatched pairs. 91 records in RAM.
+INFO	2019-03-28 04:40:35	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:18s.  Time for last 1,000,000:    4s.  Last read position: chr2:112,389,864
+INFO	2019-03-28 04:40:35	MarkDuplicates	Tracking 14358 as yet unmatched pairs. 688 records in RAM.
+INFO	2019-03-28 04:40:39	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:22s.  Time for last 1,000,000:    4s.  Last read position: chr3:28,324,280
+INFO	2019-03-28 04:40:39	MarkDuplicates	Tracking 16546 as yet unmatched pairs. 937 records in RAM.
+INFO	2019-03-28 04:40:45	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:28s.  Time for last 1,000,000:    5s.  Last read position: chr3:187,253,301
+INFO	2019-03-28 04:40:45	MarkDuplicates	Tracking 18539 as yet unmatched pairs. 80 records in RAM.
+INFO	2019-03-28 04:40:50	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:32s.  Time for last 1,000,000:    4s.  Last read position: chr5:10,652,890
+INFO	2019-03-28 04:40:50	MarkDuplicates	Tracking 20629 as yet unmatched pairs. 1234 records in RAM.
+INFO	2019-03-28 04:40:54	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:37s.  Time for last 1,000,000:    4s.  Last read position: chr6:19,838,477
+INFO	2019-03-28 04:40:54	MarkDuplicates	Tracking 22013 as yet unmatched pairs. 1269 records in RAM.
+INFO	2019-03-28 04:40:58	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:41s.  Time for last 1,000,000:    4s.  Last read position: chr7:21,880,732
+INFO	2019-03-28 04:40:58	MarkDuplicates	Tracking 22902 as yet unmatched pairs. 1567 records in RAM.
+INFO	2019-03-28 04:41:05	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:00:47s.  Time for last 1,000,000:    6s.  Last read position: chr8:474,764
+INFO	2019-03-28 04:41:05	MarkDuplicates	Tracking 23426 as yet unmatched pairs. 1479 records in RAM.
+INFO	2019-03-28 04:41:09	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:00:52s.  Time for last 1,000,000:    4s.  Last read position: chr9:40,265,240
+INFO	2019-03-28 04:41:09	MarkDuplicates	Tracking 23622 as yet unmatched pairs. 1320 records in RAM.
+INFO	2019-03-28 04:41:13	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:00:56s.  Time for last 1,000,000:    4s.  Last read position: chr10:50,125,119
+INFO	2019-03-28 04:41:13	MarkDuplicates	Tracking 23447 as yet unmatched pairs. 1237 records in RAM.
+INFO	2019-03-28 04:41:18	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:01:00s.  Time for last 1,000,000:    4s.  Last read position: chr11:47,733,976
+INFO	2019-03-28 04:41:18	MarkDuplicates	Tracking 22944 as yet unmatched pairs. 1636 records in RAM.
+INFO	2019-03-28 04:41:22	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    4s.  Last read position: chr12:10,801,951
+INFO	2019-03-28 04:41:22	MarkDuplicates	Tracking 22136 as yet unmatched pairs. 2172 records in RAM.
+[Thu Mar 28 04:41:30 GMT 2019] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 1.23 minutes.
+Runtime.totalMemory()=3666345984
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+Exception in thread "main" htsjdk.samtools.util.RuntimeIOException: java.nio.file.NoSuchFileException: /home/bpvast/01.test/CWL/tmp/sortingcollection.3061849251471313486.tmp
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:247)
+	at htsjdk.samtools.util.SortingCollection.add(SortingCollection.java:167)
+	at picard.sam.markduplicates.MarkDuplicates.buildSortedReadEndLists(MarkDuplicates.java:524)
+	at picard.sam.markduplicates.MarkDuplicates.doWork(MarkDuplicates.java:232)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:269)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:98)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:108)
+Caused by: java.nio.file.NoSuchFileException: /home/bpvast/01.test/CWL/tmp/sortingcollection.3061849251471313486.tmp
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.createFile(Files.java:632)
+	at java.nio.file.TempFileHelper.create(TempFileHelper.java:138)
+	at java.nio.file.TempFileHelper.createTempFile(TempFileHelper.java:161)
+	at java.nio.file.Files.createTempFile(Files.java:852)
+	at htsjdk.samtools.util.IOUtil.newTempPath(IOUtil.java:317)
+	at htsjdk.samtools.util.SortingCollection.newTempFile(SortingCollection.java:256)
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:221)
+	... 6 more
+[job markDuplicates] Max memory used: 303416MiB
+[job markDuplicates] Job error:
+Error collecting output for parameter 'mark-Dups_output':
+03.PICARD-Markdup.cwl:128:7: Did not find output file with glob pattern: '['markDuplicates-2019-03-21.bam']'
+[job markDuplicates] completed permanentFail
+[step markDuplicates] Output is missing expected field file:///home/bpvast/01.test/CWL/GATK-CWL-WorkFlow-201903/GATK-v1.0-Workflow.cwl#markDuplicates/mark-Dups_output
+[step markDuplicates] completed permanentFail
