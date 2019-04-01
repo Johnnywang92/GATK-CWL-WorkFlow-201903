@@ -16,7 +16,7 @@ output_samtools-sort: samtools-sort-2019-03-21.bam
 
 output_markDuplicates: markDuplicates-2019-03-21.bam
 
-tmp: ./tmp 
+#tmp: ./tmp 
 ##tmp: $(runtime.tmpdir)
 
 metricsFile_markDuplicates: metricsFile-markDuplicate2019-03-21.metrics
