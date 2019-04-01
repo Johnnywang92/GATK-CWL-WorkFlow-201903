@@ -18,7 +18,7 @@ inputs:
   
   output_samtools-sort: string
   
-  tmp: string
+  #tmp: string
 
   output_markDuplicates: string
 
@@ -141,7 +141,7 @@ steps:
       readSorted: readSorted_markDuplicates
       removeDuplicates: removeDuplicates_markDuplicates
       createindex: createIndex_markDuplicates
-      tmpdir: tmp
+      #tmpdir: tmp
     out: [mark-Dups_output]
 
   realignTarget:
