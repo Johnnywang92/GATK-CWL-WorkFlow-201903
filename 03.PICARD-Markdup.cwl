@@ -62,12 +62,12 @@ inputs:
       position: 19
       prefix: OPTICAL_DUPLICATE_PIXEL_DISTANCE
     doc: 
-  tmpdir:
-    type: string?
-    inputBinding:
-      position: 21
-      prefix: TMP_DIR=
-    doc: Default value null
+ # tmpdir:
+ #   type: string?
+ #   inputBinding:
+ #     position: 21
+ #     prefix: TMP_DIR=
+ #   doc: Default value null
   java_arg:
     type: string
     default: -Xmx4g
@@ -140,6 +140,6 @@ arguments:
   prefix: -jar
 - valueFrom: MarkDuplicates
   position: 3
-
+- TMP_DIR=$(runtime.tmpdir)
 doc: |
   Usage: 
